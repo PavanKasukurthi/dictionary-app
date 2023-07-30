@@ -38,7 +38,7 @@ const Definition = ({ bookmarks, addBookmark, removeBookmark }) => {
     const phonetics = data[0].phonetics
     if (!phonetics.length) return
 
-    const url = phonetics[1].audio || phonetics[0].audio || ''
+    const url = phonetics[0].audio || phonetics[1].audio || ''
 
     setAudio(new Audio(url))
   }
@@ -127,8 +127,10 @@ const Definition = ({ bookmarks, addBookmark, removeBookmark }) => {
           <IconButton
             onClick={() => audio.play()}
             sx={{
-              background: '#fff',
-              color: '#09203f',
+              borderRadius: 5,
+              p: 1,
+              color: '#fff',
+              background: (theme) => theme.palette.play,
             }}
           >
             <PlayArrow />

@@ -19,7 +19,14 @@ const Home = () => {
     e.preventDefault()
 
     const trimmedWord = word.trim().toLowerCase()
-    if (!trimmedWord || trimmedWord.split(' ').length > 1) return
+    if (trimmedWord.split(' ').length > 1) {
+      alert('Enter word without any spaces')
+      return
+    }
+    if (!trimmedWord) {
+      alert('Enter a word!')
+      return
+    }
 
     navigate(`/search/${trimmedWord}`)
   }

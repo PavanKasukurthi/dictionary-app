@@ -8,6 +8,7 @@ export default createTheme({
     primary: {
       main: '#111',
     },
+    play: 'linear-gradient(138.72deg, #DC8295 0%, #DC687C 95.83%)',
   },
 
   typography: {
@@ -40,7 +41,8 @@ export default createTheme({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      height: '100vh',
+      overflow: 'hidden',
+      height: '100%',
     },
   },
 })

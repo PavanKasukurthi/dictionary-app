@@ -14,7 +14,6 @@ const Bookmarks = ({ bookmarks }) => {
       </Stack>
       {!!Object.keys(bookmarks).length ? (
         Object.keys(bookmarks)
-          .slice(2)
           .map((bookmark, index) => {
             return (
               <Box
